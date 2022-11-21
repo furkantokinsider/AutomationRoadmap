@@ -15,6 +15,6 @@ def bolunen_sayı_bulma(min_sayi = min_input, max_sayi = max_input, bolen_sayi =
         if her_sayi % bolen_sayi == 0:
             tam_bolunenler.append(her_sayi)
 
-    print(tam_bolunenler)
+    return print(tam_bolunenler)
 
 bolunen_sayı_bulma()
