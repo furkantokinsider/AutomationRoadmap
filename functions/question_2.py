@@ -72,8 +72,11 @@ def sayi_okunusu(okunacak_sayi):
 input_number = int(input("Please enter a number: "))
 
 def sayi_atama(number = input_number):
+
     if number < 10 or number > 99:
         print("The number cannot be less than 10 or greater than 99. Please try again.")
         quit()
+
     sayi_okunusu(number)
+
 sayi_atama()
