@@ -5,6 +5,10 @@
 # değişkene atanan sayının okunuşu string olarak verilsin.
 # sayi_atama fonksiyonu 2 basamaktan daha az yada daha fazla sayıyı kabul etmeyecektir.
 
+"""
+Bu ödev key-value dizileri araştırılarak tekrar yapılacak
+"""
+
 def sayi_okunusu(okunacak_sayi):
     okunacak_sayi = str(okunacak_sayi)
     first_char = int(okunacak_sayi[0])
