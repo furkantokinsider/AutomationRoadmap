@@ -8,72 +8,28 @@
 """
 Bu ödev key-value dizileri araştırılarak tekrar yapılacak
 """
+birler = {1: "bir", 2: "iki", 3: "üç", 4: "dört", 5: "beş", 6: "altı", 7: "yedi", 8: "sekiz", 9: "dokuz"}
+onlar = {1: "on ", 2: "yirmi ", 3: "otuz ", 4: "kırk ", 5: "elli ", 6: "altmış ", 7: "yetmiş ", 8: "seksen ", 9: "doksan "}
+
+input_number = int(input("Please enter a number: "))
+
 
 def sayi_okunusu(okunacak_sayi):
+
+    final_string = ""
+
     okunacak_sayi = str(okunacak_sayi)
     first_char = int(okunacak_sayi[0])
     second_char = int(okunacak_sayi[1])
 
-    final_string = ""
-    if first_char == 1:
-        final_string += "on "
-    elif first_char == 2:
-        final_string += "yirmi "
-    elif first_char == 3:
-        final_string += "otuz "
-    elif first_char == 4:
-        final_string += "kırk "
-    elif first_char == 5:
-        final_string += "elli "
-    elif first_char == 6:
-        final_string += "altmış "
-    elif first_char == 7:
-        final_string += "yetmiş "
-    elif first_char == 8:
-        final_string += "seksen "
-    elif first_char == 9:
-        final_string += "doksan "
-
     if second_char == 0:
-        if first_char == 1:
-            final_string = "on"
-        elif first_char == 2:
-            final_string = "yirmi"
-        elif first_char == 3:
-            final_string = "otuz"
-        elif first_char == 4:
-            final_string = "kırk"
-        elif first_char == 5:
-            final_string = "elli"
-        elif first_char == 6:
-            final_string = "altmış"
-        elif first_char == 7:
-            final_string = "yetmiş"
-        elif first_char == 8:
-            final_string = "seksen"
-        elif first_char == 9:
-            final_string = "doksan"
-    elif second_char == 1:
-        final_string += "bir"
-    elif second_char == 2:
-        final_string += "iki"
-    elif second_char == 3:
-        final_string += "üç"
-    elif second_char == 4:
-        final_string += "dört"
-    elif second_char == 5:
-        final_string += "beş"
-    elif second_char == 6:
-        final_string += "altı"
-    elif second_char == 7:
-        final_string += "yedi"
-    elif second_char == 8:
-        final_string += "sekiz"
-    elif second_char == 9:
-        final_string += "dokuz"
+        final_string += onlar[first_char]
+    else:
+        final_string += onlar[first_char]
+        final_string += birler[second_char]
+
     print(final_string)
 
-input_number = int(input("Please enter a number: "))
 
 def sayi_atama(number = input_number):
 
@@ -82,5 +38,6 @@ def sayi_atama(number = input_number):
         quit()
 
     sayi_okunusu(number)
+
 
 sayi_atama()
