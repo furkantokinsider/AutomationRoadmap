@@ -16,11 +16,23 @@
 vize1 = int(input("Please enter your first mid-term grade: "))
 midterm1_percentage = vize1 * 30 / 100
 
-vize2 = int(input("Please enter your second mid_term grade: "))
+if vize1 < 0 or vize1 > 100:
+    print("Please enter a valid first mid-term grade. The grade cannot be less than 0 or greater than 100")
+    quit()
+
+vize2 = int(input("Please enter your second mid-term grade: "))
 midterm2_percentage = vize2 * 30 / 100
+
+if vize2 < 0 or vize2 > 100:
+    print("Please enter a valid second mid-term grade. The grade cannot be less than 0 or greater than 100")
+    quit()
 
 final = int(input("Please enter your final exam grade: "))
 final_percentage = final * 40 / 100
+
+if final < 0 or final > 100:
+    print("Please enter a valid final exam grade. The grade cannot be less than 0 or greater than 100")
+    quit()
 
 total_grade = int(midterm1_percentage + midterm2_percentage + final_percentage)
 
@@ -40,5 +52,5 @@ elif total_grade >= 60:
     print(f"Your grade is {total_grade}: DD")
 elif total_grade >= 55:
     print(f"Your grade is {total_grade}: FD")
-elif total_grade < 55:
+else:
     print(f"Your grade is {total_grade}: FF")
