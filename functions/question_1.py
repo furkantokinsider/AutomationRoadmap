@@ -5,7 +5,6 @@
 #tam_bolunenler dizisi ile min_sayi ve max_sayi arasındaki değerlerin sayısını return ile döndürsün.
 
 tam_bolunenler = []
-
 min_sayi = int(input("Minimum sayı değerini girin: "))
 max_sayi = int(input("Maximum sayı değerini girin: "))
 bolen_sayi = int(input("Bölen sayı değerini girin: "))

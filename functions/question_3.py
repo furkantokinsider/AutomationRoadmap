@@ -1,7 +1,7 @@
-# Kullanıcının girdiği vize1, vize2, final notlarına göre harf notunu hesaplayınız.
-# -vize1 toplam notun %30'una etki edecektir.
-# -vize2 toplam notun %30'una etki edecektir.
-# -final toplam notun %40'ına etki edecektir.
+# Kullanıcının girdiği vize1, vize2, final notlarına göre harf notunu hesaplayınız
+# -vize1 toplam notun %30'una etki edecektir
+# -vize2 toplam notun %30'una etki edecektir
+# -final toplam notun %40'ına etki edecektir
 
 #    Toplam Not >=  90 -----> AA
 #    Toplam Not >=  85 -----> BA
