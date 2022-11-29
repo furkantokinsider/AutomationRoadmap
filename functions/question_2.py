@@ -15,29 +15,23 @@ input_number = int(input("Please enter a number: "))
 
 
 def sayi_okunusu(okunacak_sayi):
-
     final_string = ""
-
     okunacak_sayi = str(okunacak_sayi)
     first_char = int(okunacak_sayi[0])
     second_char = int(okunacak_sayi[1])
-
     if second_char == 0:
         final_string += onlar[first_char]
     else:
         final_string += onlar[first_char]
         final_string += birler[second_char]
-
     print(final_string)
 
 
-def sayi_atama(number = input_number):
-
-    if number < 10 or number > 99:
+def sayi_atama(input_number):
+    if input_number < 10 or input_number > 99:
         print("The number cannot be less than 10 or greater than 99. Please try again.")
         quit()
+    sayi_okunusu(input_number)
 
-    sayi_okunusu(number)
 
-
-sayi_atama()
+sayi_atama(input_number)
