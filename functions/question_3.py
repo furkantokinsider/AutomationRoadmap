@@ -13,44 +13,41 @@
 #    Toplam Not >=  55 -----> FD
 #    Toplam Not <  55 -----> FF
 
-vize1 = int(input("Please enter your first mid-term grade: "))
-midterm1_percentage = vize1 * 30 / 100
+def not_kontrol(sinav):
+    if sinav < 0 or sinav > 100:
+        print("Lütfen geçerli bir sınav notu girin. Sınav notu 0'dan küçük ya da 100'den büyük olamaz.")
+        quit()
 
-if vize1 < 0 or vize1 > 100:
-    print("Please enter a valid first mid-term grade. The grade cannot be less than 0 or greater than 100.")
-    quit()
 
-vize2 = int(input("Please enter your second mid-term grade: "))
-midterm2_percentage = vize2 * 30 / 100
+vize1 = int(input("Birinci vize notunu giriniz: "))
+vize1_yüzde = vize1 * 30 / 100
+not_kontrol(vize1)
 
-if vize2 < 0 or vize2 > 100:
-    print("Please enter a valid second mid-term grade. The grade cannot be less than 0 or greater than 100.")
-    quit()
+vize2 = int(input("İkinci vize notunu giriniz: "))
+vize2_yüzde = vize2 * 30 / 100
+not_kontrol(vize2)
 
-final = int(input("Please enter your final exam grade: "))
-final_percentage = final * 40 / 100
+final = int(input("Final sınavı notunuzu giriniz: "))
+final_yüzde = final * 40 / 100
+not_kontrol(final)
 
-if final < 0 or final > 100:
-    print("Please enter a valid final exam grade. The grade cannot be less than 0 or greater than 100.")
-    quit()
+toplam_not = int(vize1_yüzde + vize2_yüzde + final_yüzde)
 
-total_grade = int(midterm1_percentage + midterm2_percentage + final_percentage)
-
-if total_grade >= 90:
-    print(f"Your grade is {total_grade}: AA")
-elif total_grade >= 85:
-    print(f"Your grade is {total_grade}: BA")
-elif total_grade >= 80:
-    print(f"Your grade is {total_grade}: BB")
-elif total_grade >= 75:
-    print(f"Your grade is {total_grade}: CB")
-elif total_grade >= 70:
-    print(f"Your grade is {total_grade}: CC")
-elif total_grade >= 65:
-    print(f"Your grade is {total_grade}: DC")
-elif total_grade >= 60:
-    print(f"Your grade is {total_grade}: DD")
-elif total_grade >= 55:
-    print(f"Your grade is {total_grade}: FD")
+if toplam_not >= 90:
+    print(f"Notunuz {toplam_not}: AA")
+elif toplam_not >= 85:
+    print(f"Notunuz {toplam_not}: BA")
+elif toplam_not >= 80:
+    print(f"Notunuz {toplam_not}: BB")
+elif toplam_not >= 75:
+    print(f"Notunuz {toplam_not}: CB")
+elif toplam_not >= 70:
+    print(f"Notunuz {toplam_not}: CC")
+elif toplam_not >= 65:
+    print(f"Notunuz {toplam_not}: DC")
+elif toplam_not >= 60:
+    print(f"Notunuz {toplam_not}: DD")
+elif toplam_not >= 55:
+    print(f"Notunuz {toplam_not}: FD")
 else:
-    print(f"Your grade is {total_grade}: FF")
+    print(f"Notunuz {toplam_not}: FF")
