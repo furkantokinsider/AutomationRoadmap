@@ -1,45 +1,43 @@
-class Ogrenci:
+"""
+50 soruluk, 4 yanlışın 1 doğruyu götürdüğü sınavda öğrencinin inputlarla girilen doğru yanlış sayısına göre
+aldığı puanı hesaplayan programı yazınız.
 
+Ogrenci isimli bir sınıf tanımlayınız.
+
+Bu sınıfın içinde ogrenci_adi, ogrenci_soyadi, ogrenci_sinif’ı değişkenleri bulunacaktır.
+Bu sınıftan nesne oluşturulurken bu bilgiler parametre olarak verilecektir.
+
+Soru diye bir sınıfınız olacaktır. Bu sınıfın net_sayisi ve hesapla isimli iki fonksiyon olacaktır.
+
+net_sayisi fonksiyonu doğru ve yanlış sayısını parametre olarak alıp öğrencinin kaç neti olduğunu bulacaktır.
+
+hesapla fonksiyonu net sayısını parametre olarak alıp öğrencinin puanını hesaplayacaktır.
+Her net 2 puan olacak şekilde öğrenci bilgileri ve puanı console ekranında gösterilecektir.
+"""
+
+
+class Ogrenci:
     def __init__(self, ogrenci_adi, ogrenci_soyadi, ogrenci_sinif):
         self.ogrenci_adi = ogrenci_adi
         self.ogrenci_soyadi = ogrenci_soyadi
         self.ogrenci_sinif = ogrenci_sinif
 
 
-    #Öğrenci bilgilerinin doğru kaydedildiğini teyit etmek için:
-    def ogrenci_bilgisi(self):
-        return self.ogrenci_adi + " " + self.ogrenci_soyadi + " " + self.ogrenci_sinif
-
-
-
 class Soru:
-
     def __init__(self):
-        pass
+        self.dogru_sayisi = 0
+        self.yanlis_sayisi = 0
 
     def net_sayisi(self, dogru_sayisi, yanlis_sayisi):
-        self.dogru_sayisi = dogru_sayisi
-        self.yanlis_sayisi = yanlis_sayisi
+        for _ in range(yanlis_sayisi):
+            dogru_sayisi -= 0.25
+        return dogru_sayisi
 
-        net_sayisi = dogru_sayisi - yanlis_sayisi * 0.25
-
-        return net_sayisi
-
-    def hesapla(self, net_sayisi):
-        self.net_sayisi = net_sayisi
-
-        score = net_sayisi * 2
-
-        return score
+    def hesapla(self, dogru_sayisi):
+        final_not = dogru_sayisi * 2
+        return final_not
 
 
-ogr1 = Ogrenci(input("Ogrenci adini girin: "), input("Ogrenci soyadini girin: "), input("Ogrenci sinifini girin: "))
-print(ogr1.ogrenci_bilgisi())
-
-score1 = Soru.net_sayisi()
-
-
-
-
-
-
+ogrenci1 = Ogrenci("furkan", "tök", "a")
+final_notu = Soru()
+print(final_notu.hesapla(final_notu.net_sayisi(40, 10)))
