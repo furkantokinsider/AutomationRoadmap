@@ -32,6 +32,7 @@ class Insan:
 
         for her_yetenek in self.yetenekler:
             kisi_bilgileri += her_yetenek + " "
+
         return kisi_bilgileri
 
     def yetenek_ekle(self, yetenek):

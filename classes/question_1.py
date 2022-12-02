@@ -31,10 +31,12 @@ class Soru:
     def net_sayisi(self, dogru_sayisi, yanlis_sayisi):
         for _ in range(yanlis_sayisi):
             dogru_sayisi -= 0.25
+
         return dogru_sayisi
 
     def hesapla(self, dogru_sayisi):
         final_not = dogru_sayisi * 2
+
         return final_not
 
 
